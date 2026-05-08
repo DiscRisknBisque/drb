@@ -1,10 +1,16 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+    "jsxImportSource": "astro",
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
       "@*": ["./src/*"]
-    }
+    },
+    "plugins": [
+      {
+        "name": "@astrojs/ts-plugin"
+      }
+    ]
   }
 }

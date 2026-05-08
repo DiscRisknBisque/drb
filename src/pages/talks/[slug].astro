@@ -1,0 +1,62 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import FormattedDate from "@components/FormattedDate.astro";
+import BackToPrev from "@components/BackToPrev.astro";
+
+export async function getStaticPaths() {
+  const talks = (await getCollection("talks"))
+    .filter(post => !post.data.draft)
+    .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+  
+  return talks.map((talk) => ({
+    params: { slug: talk.id },
+    props: talk,
+  }));
+}
+type Props = CollectionEntry<"talks">;
+
+const talk = Astro.props;
+---
+
+<PageLayout title={talk.data.title} description={talk.data.description}>
+  <Container>
+    <div class="animate">
+      <BackToPrev href="/talks">
+        Back to talks
+      </BackToPrev>
+    </div>
+    <div class="space-y-1 my-10">
+      <div class="animate flex items-center gap-1.5">
+        <div class="font-base text-sm">
+          <FormattedDate date={talk.data.date} />
+        </div>
+        &bull;
+        <div class="font-base text-sm">
+          {talk.data.length} minutes
+        </div>
+      </div>
+      <div class="animate text-2xl font-semibold text-black dark:text-white">
+        {talk.data.title}
+      </div>
+      <article>
+        {talk.data.URL && (
+          <div class="aspect-video">
+            <iframe
+              src={`https://www.youtube.com/embed/${talk.data.URL.split('v=')[1] || talk.data.URL.split('/').pop()}`}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="w-full h-full"
+            ></iframe>
+          </div>
+        )}
+      </article>
+    </div>
+    <article class="animate">
+      {talk.data.description}
+    </article>
+  </Container>
+</PageLayout>

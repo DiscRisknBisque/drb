@@ -1,0 +1,58 @@
+[
+  {
+    "title": "DeveloperDAO DevNTell - Automated Security Testing for Web3",
+    "description": "Josh and Dipesh from BuildBear discuss automated testing, security best practices, and how BuildBear is able to help streamline the process.",
+    "date": "Mar 1 2025",
+    "length": 41,
+    "URL": "https://www.youtube.com/watch?v=yN86xmxj02E"
+  },
+  {
+    "title": "TEDx Chengdu 2025 | Building for Builders",
+    "description": "A personal reflection on my journey from building childhood games to creating developer tools, and the lessons I learned across development, marketing, and product management while helping platforms better serve users.",
+    "date": "Sep 24 2024",
+    "length": 18,
+    "URL": "https://youtu.be/rNYlxyVN_7I?si=IWTwUov8MOk0am1s"
+  },
+  {
+    "title": "ETH Denver 2022 | Developer Console: Learn, Create, and Operate All in One Place",
+    "description": "Josh walks through Pagoda's new Developer Console, which helps developers get started and scale their dApps on NEAR.",
+    "date": "Feb 19 2022",
+    "length": 17,
+    "URL": "https://youtu.be/J-uFFEELi0s?si=zgq5ye5FZle10jtx"
+  },
+  {
+    "title": "NEARCon 2022 | Introducing Developer Console",
+    "description": "Josh introduces NEAR Inc's plans for Developer Console, a platform which helps developers get started and scale their dApps on NEAR.",
+    "date": "Oct 27 2021",
+    "length": 20,
+    "URL": "https://www.youtube.com/live/oYURwB5JAOU?si=BNTkmeQR3TAgePe9&t=1276"
+  },
+  {
+    "title": "TruffleCon 2020 | Introducing Truffle Teams",
+    "description": "Josh and Mike give an update on the Truffle Teams roadmap. They also demonstrate the power of Truffle Teams with a game.",
+    "date": "Nov 7 2020",
+    "length": 26,
+    "URL": "https://youtu.be/LsQ2Iwd5VMc?si=IPAOntKXTXPccJZq"
+  },
+  {
+    "title": "TruffleCon 2019 | Building a Design System",
+    "description": "Josh talks about the growth strategy for Truffle's design system and how it will be accessible to all.",
+    "date": "Sep 25 2019",
+    "length": 6,
+    "URL": "https://youtu.be/aoU710h38xE?si=NhRrjKal9Ez5eotz"
+  },
+  {
+    "title": "TruffleCon 2018 | Introducing Drizzle: Fresh Chain Data for Frontends",
+    "description": "Josh walks through Drizzle, his new product for keeping on-chain data in sync with frontend.",
+    "date": "Oct 26 2018",
+    "length": 4,
+    "URL": ""
+  },
+  {
+    "title": "TruffleCon 2018 | 2018 Product Update",
+    "description": "Josh walks through the latest product changes to the Truffle Suite.",
+    "date": "Oct 26 2018",
+    "length": 4,
+    "URL": "https://youtu.be/5wSDHU900YY?si=25YB975QfFu_Vh_4"
+  }
+]

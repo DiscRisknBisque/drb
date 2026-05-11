@@ -7,7 +7,6 @@ import BackToPrev from "@components/BackToPrev.astro";
 
 export async function getStaticPaths() {
   const talks = (await getCollection("talks"))
-    .filter(post => !post.data.draft)
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
   
   return talks.map((talk) => ({
@@ -46,10 +45,9 @@ const talk = Astro.props;
             <iframe
               src={`https://www.youtube.com/embed/${talk.data.URL.split('v=')[1] || talk.data.URL.split('/').pop()}`}
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
-              class="w-full h-full"
+              class="w-full h-full border-0"
             ></iframe>
           </div>
         )}

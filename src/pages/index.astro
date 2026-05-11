@@ -31,6 +31,12 @@ const work = await Promise.all(
     return { ...item, Content };
   })
 );
+
+const currentJob = work.find((item) => item.data.dateEnd === "Present");
+if (currentJob) {
+  const [item] = work.splice(work.indexOf(currentJob), 1);
+  work.unshift(item);
+}
 ---
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>

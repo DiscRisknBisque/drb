@@ -6,8 +6,4 @@ demoURL: "https://archive.trufflesuite.com/guides/building-a-tic-tac-toe-game-wi
 repoURL: "https://github.com/ConsenSys-archive/ttt-unity"
 ---
 
-## Highlights
-
-## Overview
-
 Demonstrates using Truffle and the MetaMask SDK with Unity to build a tic tac toe game allowing for bets on the outcome of a game. Used by Consensys in the Unity Asset Store.

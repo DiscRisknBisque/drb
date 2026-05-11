@@ -3,7 +3,7 @@ company: "Obtego"
 role:
   - "Co-Founder, CEO"
 dateStart: "10/01/2024"
-dateEnd: "Current"
+dateEnd: "Present"
 ---
 
 - Co-founded an AI-first healthcare platform that transforms discharge summaries and visit notes into interactive, plain-language patient companions while generating decision traces and for care coordination workflows.

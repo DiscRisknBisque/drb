@@ -6,8 +6,4 @@ demoURL: "https://archive.trufflesuite.com/docs/drizzle/"
 repoURL: "https://github.com/ConsenSys-archive/drizzle"
 ---
 
-## Highlights
-
-## Overview
-
 Quickly use and sync smart contract state using either a batteries-included Redux store or a set of hooks. Essentially a precursor to [WAGMI](https://wagmi.sh/).

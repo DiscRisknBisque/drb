@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 
@@ -6,10 +6,10 @@
 
 @theme {
   --font-sans:
-    Inter, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif:
-    Lora, ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    Lora, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 /*
@@ -48,13 +48,13 @@
   body {
     @apply font-sans antialiased;
     @apply flex flex-col;
-    @apply bg-stone-100 dark:bg-stone-900;
-    @apply text-black/50 dark:text-white/75;
+    @apply bg-stone-100 dark:bg-slate-950;
+    @apply text-black/50 dark:text-blue-400;
   }
 
   header {
     @apply fixed top-0 left-0 right-0 z-50 py-5;
-    @apply bg-stone-100/75 dark:bg-stone-900/25;
+    @apply bg-stone-100/75 dark:bg-slate-950/25;
     @apply backdrop-blur-xs;
   }
 
@@ -67,8 +67,8 @@
   }
 
   article {
-    @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto;
-    @apply prose-headings:text-black dark:prose-headings:text-white;
+    @apply max-w-full prose dark:text-blue-400 prose-img:mx-auto prose-img:my-auto;
+    @apply prose-headings:text-black dark:prose-headings:text-blue-400;
   }
 }
 

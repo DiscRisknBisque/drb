@@ -61,13 +61,13 @@
   body {
     @apply font-sans antialiased;
     @apply flex flex-col;
-    @apply bg-stone-100 dark:bg-slate-950;
-    @apply text-black/50 dark:text-dblue-400;
+    @apply bg-blue-100 dark:bg-slate-950;
+    @apply text-blue-900 dark:text-dblue-400;
   }
 
   header {
     @apply fixed top-0 left-0 right-0 z-50 py-5;
-    @apply bg-stone-100/75 dark:bg-slate-950/25;
+    @apply bg-blue-100/75 dark:bg-slate-950/25;
     @apply backdrop-blur-xs;
   }
 
@@ -80,15 +80,15 @@
   }
 
   article {
-    @apply max-w-full prose dark:text-dblue-400 prose-img:mx-auto prose-img:my-auto;
-    @apply prose-headings:text-black dark:prose-headings:text-dblue-400;
+    @apply max-w-full prose text-blue-900 dark:text-dblue-400 prose-img:mx-auto prose-img:my-auto;
+    @apply prose-headings:text-blue-900 dark:prose-headings:text-dblue-400;
   }
 }
 
 @layer utilities {
   article a {
     @apply font-sans text-current underline underline-offset-2;
-    @apply decoration-dblue-400;
+    @apply decoration-blue-900 dark:decoration-dblue-400;
     @apply transition-colors duration-300 ease-in-out;
   }
   article a:hover {
@@ -120,7 +120,7 @@ html.scrolled #back-to-top {
   }
 
   ul {
-    @apply marker:text-dblue-400;
+    @apply marker:text-blue-900 dark:marker:text-dblue-400;
   }
 }
 
@@ -130,14 +130,27 @@ html.scrolled #back-to-top {
   }
 
   article:hover svg {
-    filter: hue-rotate(2deg) brightness(1.8);
+    filter: hue-rotate(2deg) brightness(0.75);
   }
+}
+
+.dark .active-projects article:hover svg {
+  filter: hue-rotate(2deg) brightness(1.8);
 }
 
 .jq-signature {
   @apply transition-all duration-700 ease-out;
+  filter: hue-rotate(2deg) brightness(0.9);
 
   &:hover {
+    filter: hue-rotate(2deg) brightness(0.75);
+  }
+
+  .dark &:hover {
     filter: hue-rotate(2deg) brightness(1.8);
   }
+}
+
+.dark .jq-signature {
+  filter: none;
 }

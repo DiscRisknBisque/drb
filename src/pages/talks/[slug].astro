@@ -36,7 +36,7 @@ const talk = Astro.props;
           {talk.data.length} minutes
         </div>
       </div>
-      <div class="animate text-2xl font-semibold text-black dark:text-blue-400">
+      <div class="animate text-2xl font-semibold font-monospace text-black dark:text-dblue-400">
         {talk.data.title}
       </div>
       <article>
@@ -53,7 +53,7 @@ const talk = Astro.props;
         )}
       </article>
     </div>
-    <article class="animate">
+    <article class="animate md-content">
       {talk.data.description}
     </article>
   </Container>

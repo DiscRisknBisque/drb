@@ -10,6 +10,19 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif:
     Lora, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-monospace:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --color-dblue-400: oklch(0.5458 0.1202 262.94);
+}
+
+@layer theme {
+  :root,
+  :host {
+    @variant dark {
+      --color-dblue-400: oklch(0.5458 0.1202 262.94);
+    }
+  }
 }
 
 /*
@@ -26,7 +39,7 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: var(--color-dblue-400, currentcolor);
   }
 }
 
@@ -49,7 +62,7 @@
     @apply font-sans antialiased;
     @apply flex flex-col;
     @apply bg-stone-100 dark:bg-slate-950;
-    @apply text-black/50 dark:text-blue-400;
+    @apply text-black/50 dark:text-dblue-400;
   }
 
   header {
@@ -67,15 +80,15 @@
   }
 
   article {
-    @apply max-w-full prose dark:text-blue-400 prose-img:mx-auto prose-img:my-auto;
-    @apply prose-headings:text-black dark:prose-headings:text-blue-400;
+    @apply max-w-full prose dark:text-dblue-400 prose-img:mx-auto prose-img:my-auto;
+    @apply prose-headings:text-black dark:prose-headings:text-dblue-400;
   }
 }
 
 @layer utilities {
   article a {
     @apply font-sans text-current underline underline-offset-2;
-    @apply decoration-black/15 dark:decoration-white/30;
+    @apply decoration-dblue-400;
     @apply transition-colors duration-300 ease-in-out;
   }
   article a:hover {
@@ -99,4 +112,32 @@ html #back-to-top {
 
 html.scrolled #back-to-top {
   @apply opacity-100 pointer-events-auto;
+}
+
+.md-content {
+  h2 {
+    @apply text-xl font-semibold font-monospace;
+  }
+
+  ul {
+    @apply marker:text-dblue-400;
+  }
+}
+
+.active-projects {
+  article svg {
+    @apply transition-all duration-700 ease-out;
+  }
+
+  article:hover svg {
+    filter: hue-rotate(2deg) brightness(1.8);
+  }
+}
+
+.jq-signature {
+  @apply transition-all duration-700 ease-out;
+
+  &:hover {
+    filter: hue-rotate(2deg) brightness(1.8);
+  }
 }

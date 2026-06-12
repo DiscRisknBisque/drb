@@ -2,15 +2,17 @@
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
 import { SITE } from "@consts";
+import JQSignature from "../../public/jq-signature.svg";
 ---
 
 <header>
   <Container>
     <div class="flex flex-wrap gap-y-2 justify-between">
       <Link href="/" underline={false}>
-        <div class="font-semibold">
+        <!-- <div class="font-semibold">
           {SITE.NAME}
-        </div>
+        </div> -->
+        <span role="img" aria-label="Obtego"><JQSignature class="jq-signature h-10" /></span>
       </Link>
       <nav class="flex gap-1">
         <!-- <Link href="/blog">
@@ -20,7 +22,7 @@ import { SITE } from "@consts";
           {`/`}
         </span> -->
         <Link href="/work">
-          work
+          resumé
         </Link>
         <span>
           {`/`}

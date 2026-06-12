@@ -6,6 +6,9 @@ import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
 import { dateRange } from "@lib/utils";
 import { SITE, HOME, SOCIALS } from "@consts";
+import SlicewiseLogo from "../../public/featured/slicewise-logo.svg";
+import DioramaLogo from "../../public/featured/diorama-logo.svg";
+import ObtegoLogo from "../../public/featured/obtego-logo.svg";
 
 // const blog = (await getCollection("blog"))
 //   .filter(post => !post.data.draft)
@@ -41,21 +44,45 @@ if (currentJob) {
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
-    <h4 class="animate font-semibold">
-      Hi, I'm Josh Quintal 
+    <h4 class="animate font-semibold font-monospace text-2xl">
+      Hi, I'm Josh Quintal
     </h4>
     <div class="space-y-16">
       <section>
-        <article class="space-y-4">
-          <p class="animate">
+        <article class="animate space-y-4">
+          <p>
             I'm a technically grounded product leader who began as a software engineer, scaled developer infrastructure products in web3, and now builds AI-native healthcare systems. Experienced in translating complex technical capabilities into production products, from developer platforms serving millions of requests to agentic workflows that reason over longitudinal medical records and patient-facing clinical content.
           </p>
-          <p class="animate">
+          <p>
             我会说中文。
           </p>
         </article>
       </section>
 
+      
+      <section class="active-projects">
+        <h5 class="animate font-semibold font-monospace text-xl mb-6">
+          Active Work & Projects
+        </h5>
+        <nav class="grid grid-cols-3 gap-4">
+          <a href="https://github.com/DiscRisknBisque/slicewise" target="_blank" rel="noopener noreferrer">
+            <article class="animate h-full border dark:border-dblue-400 p-4 rounded-lg flex items-center justify-center hover:bg-white/5">
+              <span role="img" aria-label="Slicewise"><SlicewiseLogo class="w-34" /></span>
+            </article>
+          </a>
+          <a href="https://diorama.build" target="_blank" rel="noopener noreferrer">
+            <article class="animate h-full border dark:border-dblue-400 p-4 rounded-lg flex items-center justify-center hover:bg-white/5">
+              <span role="img" aria-label="Diorama"><DioramaLogo class="w-full" /></span>
+            </article>
+          </a>
+          <a href="https://obtego.io" target="_blank" rel="noopener noreferrer">
+            <article class="animate h-full border dark:border-dblue-400 p-4 rounded-lg flex items-center justify-center hover:bg-white/5">
+              <span role="img" aria-label="Obtego"><ObtegoLogo class="w-30" /></span>
+            </article>
+          </a>
+        </nav>
+      </section>
+      
       <!-- <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold">
@@ -72,7 +99,7 @@ if (currentJob) {
             </li>
           ))}
         </ul>
-      </section> -->
+      </section>
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
@@ -137,10 +164,10 @@ if (currentJob) {
             </li>
           ))}
         </ul>
-      </section>
+      </section> -->
 
       <section class="animate space-y-4">
-        <h5 class="font-semibold">
+        <h5 class="font-semibold font-monospace text-xl">
           Let's Connect
         </h5>
         <article>

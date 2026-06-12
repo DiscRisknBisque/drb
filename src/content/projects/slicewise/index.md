@@ -13,7 +13,7 @@ repoURL: "https://github.com/DiscRisknBisque/slicewise"
 
 ## Overview
 
-I like using agents to code, but I want to maintain knowledge of the codebase and ensure they stay on task. Frameworks like the BMAD Method handle this quite well, but produce so much documentation output that I found myself glazing over while reading through it. To find a happy medium between extreme detail and vibe coding, I created Slicewise.
+For me other spec-driven dev frameworks are too verbose or too light. I wanted solid plans, dynamic decision records, and something usable at each slice. To find a happy medium between extreme detail and vibe coding, I created Slicewise.
 
 Slicewise is a universal Agent Skill for steering coding work through small, reviewable vertical slices. Vertical slices keep progress concrete. Each slice should produce behavior or an artifact that a reviewer can run, inspect, or discuss.
 

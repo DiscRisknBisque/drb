@@ -60,7 +60,7 @@ if (currentJob) {
       </section>
 
       
-      <section class="active-projects">
+      <!-- <section class="active-projects">
         <h5 class="animate font-semibold font-monospace text-xl mb-6">
           Active Work & Projects
         </h5>
@@ -83,7 +83,7 @@ if (currentJob) {
         </nav>
       </section>
       
-      <!-- <section class="animate space-y-6">
+      <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold">
             Latest posts
@@ -99,29 +99,11 @@ if (currentJob) {
             </li>
           ))}
         </ul>
-      </section>
+      </section> -->
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold">
-            Recent talks
-          </h5>
-          <Link href="/talks">
-            See all talks
-          </Link>
-        </div>
-        <ul class="flex flex-col gap-4">
-          {talks.map(talk => (
-            <li>
-              <ArrowCard entry={talk} />
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold">
+          <h5 class="font-semibold font-monospace text-xl">
             Recent projects
           </h5>
           <Link href="/projects">
@@ -138,6 +120,24 @@ if (currentJob) {
       </section>
 
       <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="font-semibold font-monospace text-xl">
+            Recent talks
+          </h5>
+          <Link href="/talks">
+            See all talks
+          </Link>
+        </div>
+        <ul class="flex flex-col gap-4">
+          {talks.map(talk => (
+            <li>
+              <ArrowCard entry={talk} />
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <!-- <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold">
             Work Experience

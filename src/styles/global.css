@@ -83,6 +83,11 @@
     @apply max-w-full prose text-blue-900 dark:text-dblue-400 prose-img:mx-auto prose-img:my-auto;
     @apply prose-headings:text-blue-900 dark:prose-headings:text-dblue-400;
   }
+
+  article :not(pre) > code::before,
+  article :not(pre) > code::after {
+    content: none;
+  }
 }
 
 @layer utilities {
@@ -115,12 +120,23 @@ html.scrolled #back-to-top {
 }
 
 .md-content {
+  --tw-prose-code: var(--color-pink-700);
+
+  &:where(.dark, .dark *) {
+    --tw-prose-code: var(--color-pink-600);
+  }
+
   h2 {
     @apply text-xl font-semibold font-monospace;
   }
 
-  ul {
+  ul,
+  ol {
     @apply marker:text-blue-900 dark:marker:text-dblue-400;
+  }
+
+  :not(pre) > code {
+    @apply text-pink-700 dark:text-pink-600;
   }
 }
 
@@ -137,6 +153,8 @@ html.scrolled #back-to-top {
 .dark .active-projects article:hover svg {
   filter: hue-rotate(2deg) brightness(1.8);
 }
+
+/* Nav Logo */
 
 .jq-signature {
   @apply transition-all duration-700 ease-out;

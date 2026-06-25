@@ -81,7 +81,28 @@
 
   article {
     @apply max-w-full prose text-blue-900 dark:text-dblue-400 prose-img:mx-auto prose-img:my-auto;
-    @apply prose-headings:text-blue-900 dark:prose-headings:text-dblue-400;
+    @apply prose-headings:text-blue-900 dark:prose-headings:text-dblue-400 prose-headings:font-monospace;
+    --tw-prose-bold: var(--color-blue-900);
+    --tw-prose-bullets: var(--color-blue-900);
+    --tw-prose-counters: var(--color-blue-900);
+
+    @variant dark {
+      --tw-prose-bold: var(--color-dblue-400);
+      --tw-prose-bullets: var(--color-dblue-400);
+      --tw-prose-counters: var(--color-dblue-400);
+    }
+
+    hr {
+      @apply border-blue-900 dark:border-dblue-400 border-dashed;
+    }
+
+    a {
+      @apply inline-block decoration-blue-900/15 dark:decoration-dblue-400 hover:decoration-blue-900/25 dark:hover:decoration-blue-300 text-current hover:text-blue-900 dark:hover:text-blue-300 transition-colors duration-300 ease-in-out underline underline-offset-2;
+    }
+
+    img {
+      @apply border-2 border-blue-900 dark:border-dblue-400 rounded-lg;
+    }
   }
 
   article :not(pre) > code::before,
@@ -92,13 +113,7 @@
 
 @layer utilities {
   article a {
-    @apply font-sans text-current underline underline-offset-2;
-    @apply decoration-blue-900 dark:decoration-dblue-400;
-    @apply transition-colors duration-300 ease-in-out;
-  }
-  article a:hover {
-    @apply text-black dark:text-white;
-    @apply decoration-black/25 dark:decoration-white/50;
+    @apply inline-block decoration-blue-900/15 dark:decoration-dblue-400 hover:decoration-blue-900/25 dark:hover:decoration-blue-300 text-current hover:text-blue-900 dark:hover:text-blue-300 transition-colors duration-300 ease-in-out underline underline-offset-2;
   }
 }
 

@@ -40,6 +40,7 @@ const talks = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
+    draft: z.boolean().optional(),
     length: z.number(),
     URL: z.string().optional(),
   }),
